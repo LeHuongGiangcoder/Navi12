@@ -471,61 +471,85 @@ export const mockQuestions = [
 // Generate remaining questions programmatically for demonstration
 const generateMoreQuestions = () => {
   const additionalQuestions = [];
-  let questionId = 156;
   
-  // Generate more questions for each topic to reach 200 total
-  const questionTemplates = [
-    // More function questions
-    {
-      topicId: "topic_001",
-      unitId: "unit_001",
-      question: "Hàm số y = x³ - 3x + 2 nghịch biến trên khoảng nào?",
-      options: { A: "(-1, 1)", B: "(-∞, -1)", C: "(1, +∞)", D: "(-∞, +∞)" },
-      correctAnswer: "A",
-      explanation: "y' = 3x² - 3 = 3(x² - 1). y' < 0 khi x² < 1, tức -1 < x < 1.",
-      difficulty: "medium"
-    },
-    // More integration questions  
-    {
-      topicId: "topic_002",
-      unitId: "unit_007",
-      question: "∫₀^π sin(x)dx bằng:",
-      options: { A: "0", B: "1", C: "2", D: "-2" },
-      correctAnswer: "C", 
-      explanation: "∫₀^π sin(x)dx = [-cos(x)]₀^π = -cos(π) + cos(0) = -(-1) + 1 = 2.",
-      difficulty: "medium"
-    },
-    // More complex number questions
-    {
-      topicId: "topic_003", 
-      unitId: "unit_009",
-      question: "Tích (2 + i)(3 - 2i) bằng:",
-      options: { A: "6 - 4i + 3i - 2i²", B: "8 - i", C: "6 - i", D: "8 + i" },
-      correctAnswer: "B",
-      explanation: "(2 + i)(3 - 2i) = 6 - 4i + 3i - 2i² = 6 - i + 2 = 8 - i.",
-      difficulty: "medium"
-    },
-    // More geometry questions
-    {
-      topicId: "topic_004",
-      unitId: "unit_012", 
-      question: "Thể tích khối lăng trụ có diện tích đáy S và chiều cao h là:",
-      options: { A: "S·h/3", B: "S·h", C: "2S·h", D: "S·h/2" },
-      correctAnswer: "B",
-      explanation: "Thể tích khối lăng trụ = diện tích đáy × chiều cao = S × h.",
-      difficulty: "easy"
-    }
-  ];
-
-  // Replicate templates to generate more questions
-  for (let i = 0; i < 175; i++) {
-    const template = questionTemplates[i % questionTemplates.length];
+  // Generate questions q_011 to q_050 for topic_001 (Hàm số)
+  for (let i = 11; i <= 50; i++) {
     additionalQuestions.push({
-      id: `q_${String(questionId).padStart(3, '0')}`,
-      ...template,
-      shareableLink: `/cau-hoi/q_${String(questionId).padStart(3, '0')}`
+      id: `q_${String(i).padStart(3, '0')}`,
+      topicId: "topic_001",
+      unitId: i <= 20 ? "unit_001" : i <= 30 ? "unit_002" : i <= 40 ? "unit_003" : "unit_005",
+      question: `Câu hỏi hàm số số ${i}: Cho hàm số y = f(x). Tìm giá trị cực trị của hàm số.`,
+      options: {
+        A: "Đáp án A",
+        B: "Đáp án B", 
+        C: "Đáp án C",
+        D: "Đáp án D"
+      },
+      correctAnswer: ["A", "B", "C", "D"][i % 4],
+      explanation: `Giải thích cho câu ${i}`,
+      difficulty: i % 3 === 0 ? "hard" : i % 2 === 0 ? "medium" : "easy",
+      shareableLink: `/cau-hoi/q_${String(i).padStart(3, '0')}`
     });
-    questionId++;
+  }
+
+  // Generate questions q_056 to q_100 for topic_002 (Tích phân)
+  for (let i = 56; i <= 100; i++) {
+    additionalQuestions.push({
+      id: `q_${String(i).padStart(3, '0')}`,
+      topicId: "topic_002",
+      unitId: i <= 70 ? "unit_006" : i <= 85 ? "unit_007" : "unit_008",
+      question: `Câu hỏi tích phân số ${i}: Tính tích phân ∫f(x)dx.`,
+      options: {
+        A: "Đáp án A",
+        B: "Đáp án B",
+        C: "Đáp án C", 
+        D: "Đáp án D"
+      },
+      correctAnswer: ["A", "B", "C", "D"][i % 4],
+      explanation: `Giải thích cho câu ${i}`,
+      difficulty: i % 3 === 0 ? "hard" : i % 2 === 0 ? "medium" : "easy",
+      shareableLink: `/cau-hoi/q_${String(i).padStart(3, '0')}`
+    });
+  }
+
+  // Generate questions q_106 to q_150 for topic_003 (Số phức)
+  for (let i = 106; i <= 150; i++) {
+    additionalQuestions.push({
+      id: `q_${String(i).padStart(3, '0')}`,
+      topicId: "topic_003",
+      unitId: i <= 120 ? "unit_009" : i <= 135 ? "unit_010" : "unit_011",
+      question: `Câu hỏi số phức số ${i}: Cho số phức z. Tìm modun của z.`,
+      options: {
+        A: "Đáp án A",
+        B: "Đáp án B",
+        C: "Đáp án C",
+        D: "Đáp án D"
+      },
+      correctAnswer: ["A", "B", "C", "D"][i % 4],
+      explanation: `Giải thích cho câu ${i}`,
+      difficulty: i % 3 === 0 ? "hard" : i % 2 === 0 ? "medium" : "easy",
+      shareableLink: `/cau-hoi/q_${String(i).padStart(3, '0')}`
+    });
+  }
+
+  // Generate questions q_156 to q_200 for topic_004 (Hình học không gian)
+  for (let i = 156; i <= 200; i++) {
+    additionalQuestions.push({
+      id: `q_${String(i).padStart(3, '0')}`,
+      topicId: "topic_004",
+      unitId: i <= 170 ? "unit_012" : i <= 185 ? "unit_013" : "unit_014",
+      question: `Câu hỏi hình học không gian số ${i}: Tính thể tích khối đa diện.`,
+      options: {
+        A: "Đáp án A",
+        B: "Đáp án B",
+        C: "Đáp án C",
+        D: "Đáp án D"
+      },
+      correctAnswer: ["A", "B", "C", "D"][i % 4],
+      explanation: `Giải thích cho câu ${i}`,
+      difficulty: i % 3 === 0 ? "hard" : i % 2 === 0 ? "medium" : "easy",
+      shareableLink: `/cau-hoi/q_${String(i).padStart(3, '0')}`
+    });
   }
   
   return additionalQuestions;
@@ -542,8 +566,13 @@ export const mockTests = [
     questionCount: 50,
     duration: 90,
     difficulty: "medium",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 50}, (_, i) => `q_${String(i + 1).padStart(3, '0')}`)
+    questions: ["q_001", "q_002", "q_003", "q_004", "q_005", "q_006", "q_007", "q_008", "q_009", "q_010", 
+               "q_051", "q_052", "q_053", "q_054", "q_055", "q_101", "q_102", "q_103", "q_104", "q_105",
+               "q_151", "q_152", "q_153", "q_154", "q_155", "q_011", "q_012", "q_013", "q_014", "q_015",
+               "q_056", "q_057", "q_058", "q_059", "q_060", "q_106", "q_107", "q_108", "q_109", "q_110",
+               "q_156", "q_157", "q_158", "q_159", "q_160", "q_016", "q_017", "q_018", "q_019", "q_020"]
   },
   {
     id: "test_002",
@@ -551,8 +580,13 @@ export const mockTests = [
     questionCount: 50, 
     duration: 90,
     difficulty: "medium",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 50}, (_, i) => `q_${String(i + 51).padStart(3, '0')}`)
+    questions: ["q_021", "q_022", "q_023", "q_024", "q_025", "q_026", "q_027", "q_028", "q_029", "q_030",
+               "q_061", "q_062", "q_063", "q_064", "q_065", "q_111", "q_112", "q_113", "q_114", "q_115",
+               "q_161", "q_162", "q_163", "q_164", "q_165", "q_031", "q_032", "q_033", "q_034", "q_035",
+               "q_066", "q_067", "q_068", "q_069", "q_070", "q_116", "q_117", "q_118", "q_119", "q_120",
+               "q_166", "q_167", "q_168", "q_169", "q_170", "q_036", "q_037", "q_038", "q_039", "q_040"]
   },
   {
     id: "test_003",
@@ -560,8 +594,13 @@ export const mockTests = [
     questionCount: 50,
     duration: 90, 
     difficulty: "hard",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 50}, (_, i) => `q_${String(i + 101).padStart(3, '0')}`)
+    questions: ["q_041", "q_042", "q_043", "q_044", "q_045", "q_046", "q_047", "q_048", "q_049", "q_050",
+               "q_071", "q_072", "q_073", "q_074", "q_075", "q_121", "q_122", "q_123", "q_124", "q_125",
+               "q_171", "q_172", "q_173", "q_174", "q_175", "q_001", "q_002", "q_003", "q_004", "q_005",
+               "q_076", "q_077", "q_078", "q_079", "q_080", "q_126", "q_127", "q_128", "q_129", "q_130",
+               "q_176", "q_177", "q_178", "q_179", "q_180", "q_006", "q_007", "q_008", "q_009", "q_010"]
   },
   {
     id: "test_004",
@@ -569,8 +608,11 @@ export const mockTests = [
     questionCount: 30,
     duration: 60,
     difficulty: "easy", 
+    examType: "HSA",
     topics: ["topic_001"],
-    questions: Array.from({length: 30}, (_, i) => `q_${String(i + 1).padStart(3, '0')}`)
+    questions: ["q_001", "q_002", "q_003", "q_004", "q_005", "q_006", "q_007", "q_008", "q_009", "q_010",
+               "q_011", "q_012", "q_013", "q_014", "q_015", "q_016", "q_017", "q_018", "q_019", "q_020",
+               "q_021", "q_022", "q_023", "q_024", "q_025", "q_026", "q_027", "q_028", "q_029", "q_030"]
   },
   {
     id: "test_005", 
@@ -578,8 +620,12 @@ export const mockTests = [
     questionCount: 40,
     duration: 75,
     difficulty: "hard",
+    examType: "HSA",
     topics: ["topic_001"],
-    questions: Array.from({length: 40}, (_, i) => `q_${String(i + 11).padStart(3, '0')}`)
+    questions: ["q_031", "q_032", "q_033", "q_034", "q_035", "q_036", "q_037", "q_038", "q_039", "q_040",
+               "q_041", "q_042", "q_043", "q_044", "q_045", "q_046", "q_047", "q_048", "q_049", "q_050",
+               "q_001", "q_002", "q_003", "q_004", "q_005", "q_006", "q_007", "q_008", "q_009", "q_010",
+               "q_011", "q_012", "q_013", "q_014", "q_015", "q_016", "q_017", "q_018", "q_019", "q_020"]
   },
   {
     id: "test_006",
@@ -587,8 +633,11 @@ export const mockTests = [
     questionCount: 25,
     duration: 45,
     difficulty: "easy",
+    examType: "HSA",
     topics: ["topic_002"],
-    questions: Array.from({length: 25}, (_, i) => `q_${String(i + 51).padStart(3, '0')}`)
+    questions: ["q_051", "q_052", "q_053", "q_054", "q_055", "q_056", "q_057", "q_058", "q_059", "q_060",
+               "q_061", "q_062", "q_063", "q_064", "q_065", "q_066", "q_067", "q_068", "q_069", "q_070",
+               "q_071", "q_072", "q_073", "q_074", "q_075"]
   },
   {
     id: "test_007",
@@ -596,8 +645,12 @@ export const mockTests = [
     questionCount: 35,
     duration: 70,
     difficulty: "hard", 
+    examType: "HSA",
     topics: ["topic_002"],
-    questions: Array.from({length: 35}, (_, i) => `q_${String(i + 61).padStart(3, '0')}`)
+    questions: ["q_076", "q_077", "q_078", "q_079", "q_080", "q_081", "q_082", "q_083", "q_084", "q_085",
+               "q_086", "q_087", "q_088", "q_089", "q_090", "q_091", "q_092", "q_093", "q_094", "q_095",
+               "q_096", "q_097", "q_098", "q_099", "q_100", "q_051", "q_052", "q_053", "q_054", "q_055",
+               "q_056", "q_057", "q_058", "q_059", "q_060"]
   },
   {
     id: "test_008",
@@ -605,8 +658,10 @@ export const mockTests = [
     questionCount: 20,
     duration: 40,
     difficulty: "easy",
+    examType: "HSA",
     topics: ["topic_003"], 
-    questions: Array.from({length: 20}, (_, i) => `q_${String(i + 101).padStart(3, '0')}`)
+    questions: ["q_101", "q_102", "q_103", "q_104", "q_105", "q_106", "q_107", "q_108", "q_109", "q_110",
+               "q_111", "q_112", "q_113", "q_114", "q_115", "q_116", "q_117", "q_118", "q_119", "q_120"]
   },
   {
     id: "test_009",
@@ -614,8 +669,11 @@ export const mockTests = [
     questionCount: 30,
     duration: 60,
     difficulty: "hard",
+    examType: "HSA",
     topics: ["topic_003"],
-    questions: Array.from({length: 30}, (_, i) => `q_${String(i + 111).padStart(3, '0')}`)
+    questions: ["q_121", "q_122", "q_123", "q_124", "q_125", "q_126", "q_127", "q_128", "q_129", "q_130",
+               "q_131", "q_132", "q_133", "q_134", "q_135", "q_136", "q_137", "q_138", "q_139", "q_140",
+               "q_141", "q_142", "q_143", "q_144", "q_145", "q_146", "q_147", "q_148", "q_149", "q_150"]
   },
   {
     id: "test_010",
@@ -623,8 +681,11 @@ export const mockTests = [
     questionCount: 25,
     duration: 50, 
     difficulty: "easy",
+    examType: "HSA",
     topics: ["topic_004"],
-    questions: Array.from({length: 25}, (_, i) => `q_${String(i + 151).padStart(3, '0')}`)
+    questions: ["q_151", "q_152", "q_153", "q_154", "q_155", "q_156", "q_157", "q_158", "q_159", "q_160",
+               "q_161", "q_162", "q_163", "q_164", "q_165", "q_166", "q_167", "q_168", "q_169", "q_170",
+               "q_171", "q_172", "q_173", "q_174", "q_175"]
   },
   {
     id: "test_011",
@@ -632,8 +693,12 @@ export const mockTests = [
     questionCount: 35,
     duration: 70,
     difficulty: "hard",
+    examType: "HSA",
     topics: ["topic_004"],
-    questions: Array.from({length: 35}, (_, i) => `q_${String(i + 161).padStart(3, '0')}`)
+    questions: ["q_176", "q_177", "q_178", "q_179", "q_180", "q_181", "q_182", "q_183", "q_184", "q_185",
+               "q_186", "q_187", "q_188", "q_189", "q_190", "q_191", "q_192", "q_193", "q_194", "q_195",
+               "q_196", "q_197", "q_198", "q_199", "q_200", "q_151", "q_152", "q_153", "q_154", "q_155",
+               "q_156", "q_157", "q_158", "q_159", "q_160"]
   },
   {
     id: "test_012", 
@@ -641,8 +706,13 @@ export const mockTests = [
     questionCount: 50,
     duration: 90,
     difficulty: "medium",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 50}, (_, i) => `q_${String((i * 4 + 1) % 200 + 1).padStart(3, '0')}`)
+    questions: ["q_001", "q_003", "q_005", "q_007", "q_009", "q_011", "q_013", "q_015", "q_017", "q_019",
+               "q_051", "q_053", "q_055", "q_057", "q_059", "q_101", "q_103", "q_105", "q_107", "q_109",
+               "q_151", "q_153", "q_155", "q_157", "q_159", "q_002", "q_004", "q_006", "q_008", "q_010",
+               "q_052", "q_054", "q_056", "q_058", "q_060", "q_102", "q_104", "q_106", "q_108", "q_110",
+               "q_152", "q_154", "q_156", "q_158", "q_160", "q_012", "q_014", "q_016", "q_018", "q_020"]
   },
   {
     id: "test_013",
@@ -650,8 +720,13 @@ export const mockTests = [
     questionCount: 50,
     duration: 90,
     difficulty: "hard",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 50}, (_, i) => `q_${String((i * 3 + 2) % 200 + 1).padStart(3, '0')}`)
+    questions: ["q_021", "q_023", "q_025", "q_027", "q_029", "q_031", "q_033", "q_035", "q_037", "q_039",
+               "q_061", "q_063", "q_065", "q_067", "q_069", "q_111", "q_113", "q_115", "q_117", "q_119",
+               "q_161", "q_163", "q_165", "q_167", "q_169", "q_022", "q_024", "q_026", "q_028", "q_030",
+               "q_062", "q_064", "q_066", "q_068", "q_070", "q_112", "q_114", "q_116", "q_118", "q_120",
+               "q_162", "q_164", "q_166", "q_168", "q_170", "q_032", "q_034", "q_036", "q_038", "q_040"]
   },
   {
     id: "test_014",
@@ -659,8 +734,12 @@ export const mockTests = [
     questionCount: 40,
     duration: 75,
     difficulty: "medium", 
+    examType: "HSA",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
-    questions: Array.from({length: 40}, (_, i) => `q_${String((i * 5 + 3) % 200 + 1).padStart(3, '0')}`)
+    questions: ["q_041", "q_042", "q_043", "q_044", "q_045", "q_046", "q_047", "q_048", "q_049", "q_050",
+               "q_071", "q_072", "q_073", "q_074", "q_075", "q_121", "q_122", "q_123", "q_124", "q_125",
+               "q_171", "q_172", "q_173", "q_174", "q_175", "q_076", "q_077", "q_078", "q_079", "q_080",
+               "q_126", "q_127", "q_128", "q_129", "q_130", "q_176", "q_177", "q_178", "q_179", "q_180"]
   },
   {
     id: "test_015",
@@ -668,8 +747,13 @@ export const mockTests = [
     questionCount: 50,
     duration: 90,
     difficulty: "hard",
+    examType: "THPT",
     topics: ["topic_001", "topic_002", "topic_003", "topic_004"], 
-    questions: Array.from({length: 50}, (_, i) => `q_${String((i * 2 + 1) % 200 + 1).padStart(3, '0')}`)
+    questions: ["q_001", "q_002", "q_003", "q_004", "q_005", "q_006", "q_007", "q_008", "q_009", "q_010",
+               "q_051", "q_052", "q_053", "q_054", "q_055", "q_101", "q_102", "q_103", "q_104", "q_105",
+               "q_151", "q_152", "q_153", "q_154", "q_155", "q_181", "q_182", "q_183", "q_184", "q_185",
+               "q_186", "q_187", "q_188", "q_189", "q_190", "q_191", "q_192", "q_193", "q_194", "q_195",
+               "q_196", "q_197", "q_198", "q_199", "q_200", "q_131", "q_132", "q_133", "q_134", "q_135"]
   }
 ];
 
