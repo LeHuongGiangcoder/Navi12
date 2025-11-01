@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -12,6 +18,13 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #fff;
+  display: block !important; /* Override index.css flex display */
+  place-items: unset !important; /* Override index.css place-items */
+  min-height: unset !important; /* Override index.css min-height */
+}
+
+#root {
+  height: 100%;
 }
 
 /* Layout */
@@ -290,8 +303,8 @@ main {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 100vh;
-  padding-top: 80px; /* Account for fixed navbar height */
+  height: calc(100vh - 80px); /* Subtract navbar height from viewport height */
+  margin-top: 80px; /* Account for fixed navbar */
   display: flex;
   align-items: center;
   justify-content: center;
