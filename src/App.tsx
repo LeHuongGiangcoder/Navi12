@@ -40,8 +40,8 @@ function App() {
             {/* Luyện sâu */}
             <Route path="/luyen-sau" element={<TopicList />} />
             <Route path="/luyen-sau/on-tap" element={<TopicReview />} />
-            <Route path="/luyen-sau/chu-de/:topicId" element={<TopicDetail />} />
-            <Route path="/luyen-sau/chu-de/:topicId/bai-tap/:unitId" element={<UnitPractice />} />
+            <Route path="/luyen-sau/:topicId" element={<TopicDetail />} />
+            <Route path="/luyen-sau/:topicId/:unitId" element={<UnitPractice />} />
             
             {/* Thi đấu */}
             <Route path="/thi-dau" element={<Tournament />} />
