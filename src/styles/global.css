@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
+  background-color: #ffff;
   display: block !important; /* Override index.css flex display */
   place-items: unset !important; /* Override index.css place-items */
   min-height: unset !important; /* Override index.css min-height */
@@ -1019,15 +1019,18 @@ main {
 
 .progress-bar {
   width: 100%;
+  max-width: 70%;
   height: 6px;
   background: #e5e7eb;
   border-radius: 3px;
   overflow: hidden;
+  margin-top: 0.5rem;
 }
 
 .progress-fill {
   height: 100%;
   background: linear-gradient(90deg, #262d64, #4a5bb8);
+  max-width: 100%;
   border-radius: 3px;
   transition: width 0.3s ease;
 }
