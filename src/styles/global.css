@@ -2204,12 +2204,11 @@ h3 {
   color: #374151;
   margin-bottom: 15px;
   text-align: center;
-}
-
 .question-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}8px;
   margin-bottom: 15px;
 }
 
