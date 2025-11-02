@@ -1,34 +1,20 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import pages
-// @ts-ignore
 import Home from './pages/Home';
-// @ts-ignore
 import TestOverview from './pages/TestOverview';
-// @ts-ignore
 import TestTaking from './pages/TestTaking';
-// @ts-ignore
 import TestResult from './pages/TestResult';
-// @ts-ignore
 import TopicList from './pages/TopicList';
-// @ts-ignore
 import TopicReview from './pages/TopicReview';
-// @ts-ignore
 import TopicDetail from './pages/TopicDetail';
-// @ts-ignore
 import UnitPractice from './pages/UnitPractice';
-// @ts-ignore
 import Tournament from './pages/Tournament';
-// @ts-ignore
 import RoomCreation from './pages/RoomCreation';
-// @ts-ignore
 import RoomView from './pages/RoomView';
 
 // Import layout components
-// @ts-ignore
 import Navbar from './components/layout/Navbar';
-// @ts-ignore
 import Footer from './components/layout/Footer';
 
 // Import styles
