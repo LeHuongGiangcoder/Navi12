@@ -5,10 +5,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es2016"
   },
-  "include": ["src", "./global.d.ts"]
+  "include": ["src"]
 }
