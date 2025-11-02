@@ -72,6 +72,10 @@ const TopicDetail = () => {
     navigate(`/luyen-sau/${topicId}/${unitId}`);
   };
 
+  const handleTopicReview = () => {
+    navigate(`/luyen-sau/on-tap/${topicId}`);
+  };
+
   if (!topic) {
     return (
       <div className="topic-detail-page">
@@ -103,13 +107,23 @@ const TopicDetail = () => {
           <p className="topic-description">{topic.description}</p>
         </div>
         
-        <button 
-          className="overview-test-btn"
-          onClick={handleOverviewTest}
-        >
-          <span className="btn-icon">📝</span>
-          Làm test tổng quan
-        </button>
+        <div className="topic-actions">
+          <button 
+            className="overview-test-btn"
+            onClick={handleOverviewTest}
+          >
+            <span className="btn-icon">📝</span>
+            Làm test tổng quan
+          </button>
+          
+          <button 
+            className="topic-review-btn"
+            onClick={handleTopicReview}
+          >
+            <span className="btn-icon">📚</span>
+            Ôn tập chuyên đề
+          </button>
+        </div>
       </div>
 
       {/* Units List */}
