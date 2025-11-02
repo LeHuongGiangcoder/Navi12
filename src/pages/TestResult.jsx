@@ -216,6 +216,7 @@ const TestResult = () => {
                     {score.toFixed(1)}/10
                   </div>
                   <div className="score-label">Điểm bài kiểm tra</div>
+                  <div className="top-rank">Kết quả của bạn thuộc top 10%</div>
                 </div>
               </div>
 
