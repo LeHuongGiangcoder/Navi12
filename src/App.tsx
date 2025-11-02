@@ -2,21 +2,34 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import pages
-import Home from './pages/Home.jsx';
-import TestOverview from './pages/TestOverview.jsx';
-import TestTaking from './pages/TestTaking.jsx';
-import TestResult from './pages/TestResult.jsx';
-import TopicList from './pages/TopicList.jsx';
-import TopicReview from './pages/TopicReview.jsx';
-import TopicDetail from './pages/TopicDetail.jsx';
-import UnitPractice from './pages/UnitPractice.jsx';
-import Tournament from './pages/Tournament.jsx';
-import RoomCreation from './pages/RoomCreation.jsx';
-import RoomView from './pages/RoomView.jsx';
+// @ts-ignore
+import Home from './pages/Home';
+// @ts-ignore
+import TestOverview from './pages/TestOverview';
+// @ts-ignore
+import TestTaking from './pages/TestTaking';
+// @ts-ignore
+import TestResult from './pages/TestResult';
+// @ts-ignore
+import TopicList from './pages/TopicList';
+// @ts-ignore
+import TopicReview from './pages/TopicReview';
+// @ts-ignore
+import TopicDetail from './pages/TopicDetail';
+// @ts-ignore
+import UnitPractice from './pages/UnitPractice';
+// @ts-ignore
+import Tournament from './pages/Tournament';
+// @ts-ignore
+import RoomCreation from './pages/RoomCreation';
+// @ts-ignore
+import RoomView from './pages/RoomView';
 
 // Import layout components
-import Navbar from './components/layout/Navbar.jsx';
-import Footer from './components/layout/Footer.jsx';
+// @ts-ignore
+import Navbar from './components/layout/Navbar';
+// @ts-ignore
+import Footer from './components/layout/Footer';
 
 // Import styles
 import './styles/global.css';

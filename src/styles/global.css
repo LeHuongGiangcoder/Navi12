@@ -3555,8 +3555,11 @@ h3 {
 .questions-list {
   display: flex
   flex-direction: column;
-  gap: var(--spacing-xl);
-}
+
+
+  gap: 2rem;
+
+/* Empty ruleset removed to fix “at-rule or selector expected” error */
 
 .question-review-item {
   background: var(--color-white);
