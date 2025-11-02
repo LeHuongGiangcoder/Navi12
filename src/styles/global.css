@@ -3890,6 +3890,16 @@ h3 {
   gap: var(--spacing-2xl);
 }
 
+.tournament-before-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  width: 100%;
+  max-width: 1000px;
+}
+
 .countdown-section {
   text-align: center;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
@@ -3898,6 +3908,7 @@ h3 {
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-lg);
   min-width: 400px;
+  flex: 1;
 }
 
 .countdown-section h2 {
@@ -3943,8 +3954,12 @@ h3 {
 }
 
 .tournament-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
   width: 100%;
   max-width: 500px;
+  flex: 1;
 }
 
 .info-card {
@@ -3953,6 +3968,7 @@ h3 {
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
   box-shadow: var(--shadow-md);
+  height: 100%;
 }
 
 .info-card h3 {
@@ -3975,6 +3991,25 @@ h3 {
 
 .info-card li:last-child {
   border-bottom: none;
+}
+
+.start-test-btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.start-test-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* During Tournament State */
@@ -4124,6 +4159,11 @@ h3 {
     padding: var(--spacing-md);
   }
   
+  .tournament-before-content {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+  
   .countdown-section {
     min-width: auto;
     width: 100%;
@@ -4131,6 +4171,10 @@ h3 {
   
   .countdown-time {
     font-size: 2rem;
+  }
+  
+  .tournament-info {
+    max-width: 100%;
   }
   
   .timer-time {
@@ -4156,6 +4200,18 @@ h3 {
   .tournament-during .navigator-section {
     order: -1;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-time {
+    font-size: 1.75rem;
+  }
+  
+  .sign-in-btn, .start-test-btn {
+    width: 100%;
+    font-size: var(--font-size-md);
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 }
 
