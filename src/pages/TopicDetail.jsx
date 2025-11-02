@@ -102,7 +102,6 @@ const TopicDetail = () => {
                 ></div>
               </div>
               <span className="progress-text">{topicProgress.completed}% hoàn thành</span>
-              <span className="top-skill">Kỹ năng của bạn thuộc top 5%</span>
             </div>
           </div>
           <p className="topic-description">{topic.description}</p>
