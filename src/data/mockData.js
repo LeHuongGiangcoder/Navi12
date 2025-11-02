@@ -561,6 +561,18 @@ mockQuestions.push(...generateMoreQuestions());
 // Tests (15 đề thi)
 export const mockTests = [
   {
+    id: "tournament-test",
+    name: "🏆 Giải Đấu Toán Học 2025",
+    questionCount: 25,
+    duration: 90,
+    difficulty: "hard",
+    examType: "TOURNAMENT",
+    topics: ["topic_001", "topic_002", "topic_003", "topic_004"],
+    questions: ["q_001", "q_002", "q_003", "q_004", "q_005", "q_006", "q_007", "q_008", "q_009", "q_010",
+               "q_051", "q_052", "q_053", "q_054", "q_055", "q_101", "q_102", "q_103", "q_104", "q_105",
+               "q_151", "q_152", "q_153", "q_154", "q_155"]
+  },
+  {
     id: "test_001",
     name: "Đề thi thử THPT 2025 - Đợt 1", 
     questionCount: 50,
@@ -757,9 +769,55 @@ export const mockTests = [
   }
 ];
 
+export const mockFriends = [
+  {
+    id: "friend_001",
+    name: "Nguyễn Văn An",
+    phone: "0901234567",
+    avatar: "https://i.pravatar.cc/150?img=1",
+    isOnline: true
+  },
+  {
+    id: "friend_002", 
+    name: "Trần Thị Bình",
+    phone: "0912345678",
+    avatar: "https://i.pravatar.cc/150?img=2",
+    isOnline: false
+  },
+  {
+    id: "friend_003",
+    name: "Lê Hoàng Cường",
+    phone: "0923456789", 
+    avatar: "https://i.pravatar.cc/150?img=3",
+    isOnline: true
+  },
+  {
+    id: "friend_004",
+    name: "Phạm Thị Dung",
+    phone: "0934567890",
+    avatar: "https://i.pravatar.cc/150?img=4",
+    isOnline: true
+  },
+  {
+    id: "friend_005",
+    name: "Hoàng Văn Em",
+    phone: "0945678901",
+    avatar: "https://i.pravatar.cc/150?img=5", 
+    isOnline: false
+  },
+  {
+    id: "friend_006",
+    name: "Vũ Thị Phương",
+    phone: "0956789012",
+    avatar: "https://i.pravatar.cc/150?img=6",
+    isOnline: true
+  }
+];
+
 export default {
   mockQuestions,
   mockTests, 
   mockTopics,
-  mockUnits
+  mockUnits,
+  mockFriends
 };
