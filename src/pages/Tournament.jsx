@@ -166,26 +166,28 @@ const Tournament = () => {
       {/* State 1: Before Tournament */}
       {tournamentState === 'before' && (
         <div className="tournament-before">
-          <div className="countdown-section">
-            <h2>Cuộc thi sắp bắt đầu!</h2>
-            <div className="countdown-timer">
-              <span className="countdown-label">Bắt đầu sau:</span>
-              <span className="countdown-time">{formatTime(countdown)}</span>
+          <div className="tournament-before-content">
+            <div className="countdown-section">
+              <h2>Cuộc thi sắp bắt đầu!</h2>
+              <div className="countdown-timer">
+                <span className="countdown-label">Bắt đầu sau:</span>
+                <span className="countdown-time">{formatTime(countdown)}</span>
+              </div>
+              <button className="sign-in-btn" onClick={handleSignIn}>
+                📱 Đăng ký nhận thông báo
+              </button>
             </div>
-            <button className="sign-in-btn" onClick={handleSignIn}>
-              📱 Sign me in
-            </button>
-          </div>
-          
-          <div className="tournament-info">
-            <div className="info-card">
-              <h3>📋 Thông tin cuộc thi</h3>
-              <ul>
-                <li>⏱️ Thời gian: 90 phút</li>
-                <li>📝 Số câu hỏi: 25 câu</li>
-                <li>🎯 Chủ đề: Toán học tổng hợp</li>
-                <li>🏅 Giải thưởng: Top 3 nhận quà</li>
-              </ul>
+            
+            <div className="tournament-info">
+              <div className="info-card">
+                <h3>📋 Thông tin cuộc thi</h3>
+                <ul>
+                  <li>⏱️ Thời gian: 90 phút</li>
+                  <li>📝 Số câu hỏi: 25 câu</li>
+                  <li>🎯 Chủ đề: Toán học tổng hợp</li>
+                  <li>🏅 Giải thưởng: Top 3 nhận quà</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
