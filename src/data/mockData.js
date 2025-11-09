@@ -1,5 +1,29 @@
 // Mock Data for Math Grade 12 Application
 
+// Mock Leaderboard for Tournament
+export const mockLeaderboard = [
+  { id: 1, name: 'Nguyễn Văn A', score: 9.5, time: '45:30', rankChange: 2, isCurrentUser: false },
+  { id: 2, name: 'Trần Thị B', score: 9.2, time: '52:15', rankChange: -1, isCurrentUser: false },
+  { id: 3, name: 'Lê Văn C', score: 9.0, time: '48:45', rankChange: 1, isCurrentUser: true },
+  { id: 4, name: 'Phạm Thị D', score: 8.8, time: '55:20', rankChange: 0, isCurrentUser: false },
+  { id: 5, name: 'Hoàng Văn E', score: 8.5, time: '60:10', rankChange: -2, isCurrentUser: false },
+  { id: 6, name: 'Vũ Thị F', score: 8.3, time: '58:30', rankChange: 1, isCurrentUser: false },
+  { id: 7, name: 'Đỗ Văn G', score: 8.0, time: '62:45', rankChange: 0, isCurrentUser: false },
+  { id: 8, name: 'Bùi Thị H', score: 7.8, time: '65:15', rankChange: -1, isCurrentUser: false },
+  { id: 9, name: 'Ngô Văn I', score: 7.5, time: '68:20', rankChange: 1, isCurrentUser: false },
+  { id: 10, name: 'Lý Thị K', score: 7.2, time: '70:30', rankChange: 0, isCurrentUser: false },
+  { id: 11, name: 'Trương Văn L', score: 7.0, time: '72:45', rankChange: -1, isCurrentUser: false },
+  { id: 12, name: 'Phan Thị M', score: 6.8, time: '75:10', rankChange: 0, isCurrentUser: false },
+  { id: 13, name: 'Đinh Văn N', score: 6.5, time: '78:20', rankChange: 1, isCurrentUser: false },
+  { id: 14, name: 'Võ Thị O', score: 6.3, time: '80:15', rankChange: -1, isCurrentUser: false },
+  { id: 15, name: 'Dương Văn P', score: 6.0, time: '85:30', rankChange: 0, isCurrentUser: false },
+  { id: 16, name: 'Mai Thị Q', score: 5.8, time: '87:45', rankChange: 1, isCurrentUser: false },
+  { id: 17, name: 'Chu Văn R', score: 5.5, time: '89:20', rankChange: -1, isCurrentUser: false },
+  { id: 18, name: 'Tô Thị S', score: 5.2, time: '90:00', rankChange: 0, isCurrentUser: false },
+  { id: 19, name: 'Lưu Văn T', score: 5.0, time: '90:00', rankChange: 1, isCurrentUser: false },
+  { id: 20, name: 'Hồ Thị U', score: 4.8, time: '90:00', rankChange: -1, isCurrentUser: false }
+];
+
 // Topics (Chuyên đề)
 export const mockTopics = [
   {

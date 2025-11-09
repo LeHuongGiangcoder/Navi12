@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { mockLeaderboard } from '../data/mockData';
 
 const Home = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -111,26 +112,13 @@ const Home = () => {
         <h2 className="feature-title">Thi đấu tuần</h2>
         <p className="feature-description">Tham gia cuộc thi hàng tuần với các học sinh trên toàn quốc. Đua top, nhận thưởng và khẳng định năng lực.</p>
         <div className="card-grid">
-          <div className="mock-card">
-            <div className="card-header">Giải đấu tuần 1</div>
-            <div className="card-date">Tuần 1/2025</div>
-            <div className="card-rating">★★★★★ (1000 lượt)</div>
-          </div>
-          <div className="mock-card">
-            <div className="card-header">Giải đấu tuần 2</div>
-            <div className="card-date">Tuần 2/2024</div>
-            <div className="card-rating">★★★★☆ (800 lượt)</div>
-          </div>
-          <div className="mock-card">
-            <div className="card-header">Giải đấu tuần 3</div>
-            <div className="card-date">Tuần 3/2024</div>
-            <div className="card-rating">★★★★★ (900 lượt)</div>
-          </div>
-          <div className="mock-card">
-            <div className="card-header">Giải đấu tuần 4</div>
-            <div className="card-date">Tuần 4/2024</div>
-            <div className="card-rating">★★★★★ (700 lượt)</div>
-          </div>
+          {mockLeaderboard.slice(0, 5).map((user, index) => (
+            <div key={index} className="mock-card">
+              <div className="card-header">Hạng #{index + 1}: {user.name}</div>
+              <div className="card-date">Điểm: {user.score}</div>
+              <div className="card-rating">Thời gian: {user.time}</div>
+            </div>
+          ))}
         </div>
         <Link to="/thi-dau" className="section-button">Tham gia</Link>
       </section>
