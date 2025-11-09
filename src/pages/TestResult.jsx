@@ -137,8 +137,8 @@ const TestResult = () => {
                   <Radar
                     name="Phần trăm đúng"
                     dataKey="percentage"
-                    stroke="#3b82f6"
-                    fill="#3b82f6"
+                    stroke="#9BC2F7"
+                    fill="#9BC2F7"
                     fillOpacity={0.3}
                     strokeWidth={2}
                   />

@@ -3,8 +3,9 @@
 /* Colors */
 :root {
   /* Primary Colors */
-  --color-primary: #262d64; /* Deep Blue - Trust, focus, intelligence */
-  --color-accent: #eb6412; /* Bright Orange - Energy, action, youthfulness */
+  --color-primary: #9BC2F7; /* Light Blue - Fresh, modern, approachable */
+  --color-primary-dark: #7A9FD4; /* Darker shade for text and contrasts */
+  --color-primary-light: #BCE0FF; /* Lighter tint for backgrounds and gradients */
   
   /* Neutral Colors */
   --color-white: #ffffff;
