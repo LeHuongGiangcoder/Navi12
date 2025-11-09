@@ -14,6 +14,5 @@
  Use font-weight: 400. Line height: 1.5–1.7 to maintain readability for longer text. 
   
  ## Colors:  
- - **Primary:**  `#262d64` (Deep Blue) – Trust, focus, intelligence   
- - **Accent:**  `#eb6412` (Bright Orange) – Energy, action, youthfulness   
- - **Neutral:**  White background, soft grays for balance
+ - **Primary:**  `#9BC2F7` (Light Blue) – Fresh, modern, approachable    
+- **Neutral:** White, soft grays
