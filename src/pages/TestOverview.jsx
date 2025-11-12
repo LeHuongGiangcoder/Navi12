@@ -77,7 +77,6 @@ const TestOverview = () => {
       <div className="stats-section">
         <div className="stats-grid">
           <div className="stat-card">
-            <div className="stat-icon">📊</div>
             <div className="stat-content">
               <div className="stat-value">{userStats.highestScore}%</div>
               <div className="stat-label">Điểm cao nhất</div>
@@ -85,7 +84,6 @@ const TestOverview = () => {
           </div>
           
           <div className="stat-card">
-            <div className="stat-icon">✅</div>
             <div className="stat-content">
               <div className="stat-value">{userStats.testsCompleted}</div>
               <div className="stat-label">Bài đã hoàn thành</div>
@@ -93,7 +91,6 @@ const TestOverview = () => {
           </div>
           
           <div className="stat-card">
-            <div className="stat-icon">🎯</div>
             <div className="stat-content">
               <div className="stat-value">{userStats.averageCorrectRate}%</div>
               <div className="stat-label">Tỷ lệ đúng trung bình</div>
@@ -101,7 +98,6 @@ const TestOverview = () => {
           </div>
           
           <div className="stat-card">
-            <div className="stat-icon">📈</div>
             <div className="stat-content">
               <div className="stat-value">{userStats.completionPercentage}%</div>
               <div className="stat-label">Tiến độ hoàn thành</div>
