@@ -4458,7 +4458,7 @@ h3 {
 }
 
 .invite-btn {
-  background: #10b981;
+  background: #3b82f6;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -4470,7 +4470,7 @@ h3 {
 }
 
 .invite-btn:hover:not(:disabled) {
-  background: #059669;
+  background: #2563eb;
 }
 
 .invite-btn:disabled {
