@@ -28,7 +28,7 @@ const Navbar = () => {
               to="/kiem-tra" 
               className={`navbar-link ${isActive('/kiem-tra') ? 'active' : ''}`}
             >
-              Kiểm tra
+              Luyện đề
             </Link>
           </li>
           <li>

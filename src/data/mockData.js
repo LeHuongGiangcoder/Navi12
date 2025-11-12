@@ -640,7 +640,7 @@ export const mockTests = [
   },
   {
     id: "test_004",
-    name: "Kiểm tra Hàm số - Cơ bản",
+    name:"HSA 1",
     questionCount: 30,
     duration: 60,
     difficulty: "easy", 
@@ -652,7 +652,7 @@ export const mockTests = [
   },
   {
     id: "test_005", 
-    name: "Kiểm tra Hàm số - Nâng cao",
+    name: "HSA 2",
     questionCount: 40,
     duration: 75,
     difficulty: "hard",
@@ -665,7 +665,7 @@ export const mockTests = [
   },
   {
     id: "test_006",
-    name: "Kiểm tra Tích phân - Cơ bản", 
+    name: "HSA 3", 
     questionCount: 25,
     duration: 45,
     difficulty: "easy",
@@ -677,7 +677,7 @@ export const mockTests = [
   },
   {
     id: "test_007",
-    name: "Kiểm tra Tích phân - Nâng cao",
+    name: "HSA 4",
     questionCount: 35,
     duration: 70,
     difficulty: "hard", 
@@ -690,7 +690,7 @@ export const mockTests = [
   },
   {
     id: "test_008",
-    name: "Kiểm tra Số phức - Cơ bản",
+    name: "HSA 5",
     questionCount: 20,
     duration: 40,
     difficulty: "easy",
@@ -701,7 +701,7 @@ export const mockTests = [
   },
   {
     id: "test_009",
-    name: "Kiểm tra Số phức - Nâng cao", 
+    name: "HSA 6", 
     questionCount: 30,
     duration: 60,
     difficulty: "hard",
@@ -713,7 +713,7 @@ export const mockTests = [
   },
   {
     id: "test_010",
-    name: "Kiểm tra Hình học không gian - Cơ bản",
+    name: "HSA 7",
     questionCount: 25,
     duration: 50, 
     difficulty: "easy",
@@ -725,7 +725,7 @@ export const mockTests = [
   },
   {
     id: "test_011",
-    name: "Kiểm tra Hình học không gian - Nâng cao",
+    name: "HSA 8",
     questionCount: 35,
     duration: 70,
     difficulty: "hard",
@@ -766,7 +766,7 @@ export const mockTests = [
   },
   {
     id: "test_014",
-    name: "Kiểm tra tổng hợp - Mức độ trung bình",
+    name: "HSA 9",
     questionCount: 40,
     duration: 75,
     difficulty: "medium", 
