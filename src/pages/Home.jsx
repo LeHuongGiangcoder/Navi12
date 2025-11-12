@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   const scrollToFeatures = () => {
-    const featuresSection = document.getElementById('features');
+    const featuresSection = document.getElementById('feature-test');
     if (featuresSection) {
       featuresSection.scrollIntoView({ behavior: 'smooth' });
     }
