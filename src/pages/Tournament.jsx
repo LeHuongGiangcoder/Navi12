@@ -182,6 +182,7 @@ const Tournament = () => {
               <div className="info-card">
                 <h3>📋 Thông tin cuộc thi</h3>
                 <ul>
+                  <li> Số lượt đã đăng ký: 1999</li>
                   <li>⏱️ Thời gian: 90 phút</li>
                   <li>📝 Số câu hỏi: 25 câu</li>
                   <li>🎯 Chủ đề: Toán học tổng hợp</li>
